@@ -1,0 +1,17 @@
+[project]
+name = "mcp-poc"
+version = "0.1.0"
+description = "Play around with MCP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "geopy>=2.4.1",
+    "google-genai>=1.9.0",
+    "mcp>=1.6.0",
+    "starlette>=0.46.1",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]
