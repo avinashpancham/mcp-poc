@@ -1,4 +1,4 @@
-# Model Context Procotol: examples using STDIO and SSE
+# Model Context Protocol: examples using STDIO and SSE
 
 Google released a [great tutorial](https://ai.google.dev/gemini-api/docs/function-calling?example=weather#use_model_context_protocol_mcp) on using Gemini together with the Model Context Protocol (MCP). It shows how easily you can connect Gemini to a tool, and how simple it is to modify for your use case. 
 
