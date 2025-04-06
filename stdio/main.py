@@ -11,7 +11,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 server_params = StdioServerParameters(
     command="npx",
-    args=["-y", "@philschmid/weather-mcp"],
+    args=["-y", "kubernetes-mcp-server"],
     env=None,
 )
 
@@ -19,7 +19,7 @@ server_params = StdioServerParameters(
 async def run():
     async with stdio_client(server_params) as (read, write):
         async with ClientSession(read, write) as session:
-            prompt = f"What is the weather in London in {datetime.now().strftime('%Y-%m-%d')}?"
+            prompt = f"Can you deploy a pod in namespace default with name example using image nginx:1.14.2?"
             await session.initialize()
 
             # Get tools from MCP session and convert to Gemini Tool objects
